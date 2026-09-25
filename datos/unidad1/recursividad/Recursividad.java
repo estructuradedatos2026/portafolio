@@ -30,9 +30,18 @@ public class Recursividad {
 	}
 
 
+	public static int sumaArreglo(int[] data, int tam) {
+
+		if(tam < 0) {
+			return 0;
+		} else {
+			return data[tam] + sumaArreglo(data, tam-1);
+		}
+	}
+
 	public static void main(String[] a) {
-		//saludo( "Gabriel", 100);
-		cuentaRegresiva(100);
+		int[] data = {1,2, 9};
+		System.out.println(sumaArreglo(data, data.length -1));
 	}
 
 }
